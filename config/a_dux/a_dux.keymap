@@ -1,0 +1,120 @@
+#include <behaviors.dtsi/*
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */>
+
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define DEFAULT 0
+#define COLEMAK 1
+#define FUNC 2
+#define NAV 3
+#define L_MOD 4
+#define R_MOD 5
+#define MOUSE 6
+#define NUM 7
+#define ALWAYS 8
+
+/ {
+  behaviors {
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping-term-ms = <150>;
+      quick_tap_ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+  };
+};
+
+/ {
+    keymap 
+	{
+    compatible = "zmk,keymap";
+
+    default_layer {
+            bindings = <
+    &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P
+    &hm LSHIFT A &lt FUNC S &lt NAV D &lt L_MOD F &kp G &kp H &lt R_MOD J &lt MOUSE K &lt NUM L &hm LSHIFT SEMI
+    &kp Z &hm LCTRL X &hm LGUI C &hm LALT V &kp B &kp N &hm LALT M &hm LGUI COMMA &hm LCTRL PERIOD &kp SLASH
+    &kp LA(LSHIFT) &kp BACKSPACE &lt ALWAYS SPACE &kp LC(LA(LSHIFT))
+            >;
+        };
+
+    colemak_layer {
+            bindings = <
+    &kp Q &kp W &kp F &kp P &kp B &kp J &kp L &kp U &kp Y &kp SEMI
+    &hm LSHIFT A &lt FUNC R &lt NAV S &lt L_MOD T &kp G &kp M &lt R_MOD N &lt MOUSE E &lt NUM I &hm LSHIFT O
+    &kp Z &hm LCTRL X &hm LGUI C &hm LALT D &kp V &kp K &hm LALT H &hm LGUI COMMA &hm LCTRL DOT &kp SLASH
+    &kp LA(LSHIFT) &kp BACKSPACE &lt ALWAYS SPACE &kp LC(LA(LSHIFT))
+            >;
+        };
+
+    func_layer {
+            bindings = <
+    &trans &trans &trans &trans &trans &trans &kp F7 &kp F8 &kp F9 &kp F10  
+    &trans &none &kp LC(LALT) &trans &trans &trans &kp F4 &kp F5 &kp F6 &kp F11
+    &trans &trans &trans &trans &trans &trans &kp F1 &kp F2 &kp F3 &kp F12  
+    &trans &trans &trans &trans
+            >;
+        };
+
+    nav_layer {
+            bindings = <
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &none &trans &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans
+            >;
+        };
+
+    left_mod_layer {
+            bindings = <
+    &trans &trans &trans &trans &trans &trans &kp UNDER &kp PIPE &kp SQT &trans
+    &kp CARET &kp STAR &kp AMPS &none &trans &kp HASH &kp TILDE &kp SLASH &kp DQT &kp DOLLAR
+    &trans &trans &trans &trans &trans &trans &kp MINUS &kp BSLH &kp GRAVE &trans
+    &trans &trans &trans &trans
+            >;
+        };
+
+    right_mod_layer {
+            bindings = <
+    &trans &kp COLON &kp LT &kp GT &trans &trans &trans &trans &trans &trans
+    &kp LBRC &kp RBRC &kp LPAR &kp RPAR &kp AT &trans &none &kp EQUAL &kp PLUS &kp PERCENT
+    &trans &kp EXCL &kp LBKT &kp RBKT &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans
+            >;
+        };
+
+    mouse_layer {
+            bindings = <
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &none &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans
+            >;
+        };
+
+    num_layer {
+            bindings = <
+    &trans &kp N7 &kp N8 &kp N9 &trans &trans &trans &trans &trans &trans
+    &kp N0 &kp N4 &kp N5 &kp N6 &trans &trans &trans &trans &none &trans
+    &trans &kp N1 &kp N2 &kp N3 &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans
+            >;
+        };
+
+    always_layer {
+            bindings = <
+    &trans &trans &kp COLON &kp ESCAPE &trans &trans &trans &bt BT_PRV &bt BT_NXT &bt BT_CLR
+    &trans &trans &trans &kp ENTER &trans &trans &kp LGUI &trans &trans &trans
+    &tog COLEMAK &trans &trans &trans &trans &trans &trans &trans &trans &trans
+    &trans &kp TAB &none &trans
+            >;
+        };
+    };
+};
