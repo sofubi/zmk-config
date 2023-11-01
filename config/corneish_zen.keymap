@@ -15,6 +15,7 @@
 #define RSYM 2
 #define NUM 3
 #define NAV 4
+#define ALWAYS 5
 
 / {
     chosen {
@@ -26,10 +27,25 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_esc {
+        combo_tab {
             timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
+            key-positions = <10 11>;
+            bindings = <&kp TAB>;
+        };
+        combo_num {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&mo NUM>;
+        };
+        combo_nav {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&mo NAV>;
+        };
+        combo_always {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&mo ALWAYS>;
         };
     };
 };
@@ -48,7 +64,7 @@
             label = "TAP_DANCE_TAB";
             #binding-cells = <10>;
             tapping-term-ms = <200>;
-            bindings = <&kp A>, <&kp TAB>;
+            bindings = <&kp A>, <%kp LSHFT>;
         };
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
@@ -75,18 +91,28 @@
 &td0 &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
 &td1 &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &td2
 &td3 &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-        &kp LGUI &mo 2 &kp BSPC    &kp SPACE &mo 1 &kp RALT
+       &kp LGUI &mo RSYM &kp BSPC    &kp SPACE &mo LSYM &kp RALT
             >;
         };
 
         left_sym_layer {
+            label = "LSYM";
+            bindings = <
+&trans &kp COLON &kp LT &kp GT &kp SEMI   &trans &trans &trans &trans &trans 
+&kp LBRC &kp RBRC &kp LPAR &kp RPAR &kp AT  &trans &trans &kp EQUAL &kp PLUS &kp PRCNT
+&trans &kp EXCL &kp LBKT &kp RBKT &trans  &trans &trans &trans &trans &trans
+&kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &kp RET  &none &kp K_PLAY_PAUSE
+            >;
+        };
+
+        right_sym_layer {
             label = "RSYM";
             bindings = <
-&kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-&kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                     &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-            >;
+&trans &trans &trans &trans &trans  &trans &kp UNDER &kp PIPE &kp SQT &trans
+&kp CARET &kp STAR &kp AMPS &trans &trans  &kp HASH &kp TILDE &kp FSLH &kp DQT &kp DLLR
+&trans &trans &trans &trans &trans  &trans &kp MINUS &kp BSLH &kp GRAVE &trans
+&trans &none &trans &trans &trans &trans
+             >;
         };
 
         raise_layer {
