@@ -64,7 +64,7 @@
             label = "TAP_DANCE_TAB";
             #binding-cells = <10>;
             tapping-term-ms = <200>;
-            bindings = <&kp A>, <%kp LSHFT>;
+            bindings = <&kp A>, <&kp LSHFT>;
         };
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
