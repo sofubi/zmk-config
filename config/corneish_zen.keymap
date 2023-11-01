@@ -61,24 +61,17 @@
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_TAB";
+            label = "TAP_DANCE_MOD_TAP_TAB";
             #binding-cells = <10>;
             tapping-term-ms = <200>;
-            bindings = <&kp A>, <&kp LSHFT>;
+            bindings = <&mt LSHFT A>, <&kp TAB>;
         };
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_ENTER";
+            label = "TAP_DANCE_MOD_TAP_ENTER";
             #binding-cells = <19>;
             tapping-term-ms = <200>;
-            bindings = <&kp SEMI>, <&kp ENT>;
-        };
-        td3: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_CTRL";
-            #binding-cells = <20>;
-            tapping-term-ms = <200>;
-            bindings = <&kp Z>, <&kp LCTRL>;
+            bindings = <&mt SEMI RSHFT>, <&kp ENT>;
         };
     };
 
@@ -90,7 +83,7 @@
             bindings = <
 &td0 &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
 &td1 &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &td2
-&td3 &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
+&mt LCTRL Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
        &kp LGUI &mo RSYM &kp BSPC    &kp SPACE &mo LSYM &kp RALT
             >;
         };
