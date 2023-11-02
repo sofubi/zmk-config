@@ -54,21 +54,21 @@
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_ESC";
+            label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp Q>, <&kp ESC>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP_TAB";
+            label = "TAP_DANCE_1";
             #binding-cells = <10>;
             tapping-term-ms = <200>;
             bindings = <&mt LSHFT A>, <&kp TAB>;
         };
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP_ENTER";
+            label = "TAP_DANCE_2";
             #binding-cells = <19>;
             tapping-term-ms = <200>;
             bindings = <&mt SEMI RSHFT>, <&kp ENT>;
