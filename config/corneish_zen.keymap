@@ -138,7 +138,7 @@
 &trans &trans &trans &kp ESC &trans &trans &trans &trans &trans &trans &trans
 &trans &kp TILDE &kp TAB &kp ENTER &trans &trans &trans &trans &trans &trans &trans
 &trans &kp LCTRL &kp LGUI &kp LALT &trans &trans &trans &trans &trans &trans &trans 
-&none &none &trans &trans &trans
+&trans &trans &none &none &trans
             >;
         };
     };
