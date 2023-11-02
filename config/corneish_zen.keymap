@@ -25,7 +25,7 @@
 };
 
 &mt {
-    retro-tap;
+    tapping-term-ms = <50>;
 };
 
 / {
