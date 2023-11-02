@@ -71,7 +71,7 @@
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt SEMI RSHFT>, <&kp RET>;
+            bindings = <&mt RSHFT SEMI>, <&kp RET>;
         };
     };
 
