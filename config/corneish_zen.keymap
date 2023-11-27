@@ -136,7 +136,7 @@
             label = "ALWAYS";
             bindings = <
 &trans &trans &trans &kp ESC &trans &trans &trans &trans &trans &trans &trans
-&trans &kp TILDE &kp TAB &kp ENTER &trans &trans &trans &trans &trans &trans &trans
+&trans &kp TILDE &kp TAB &kp ENTER &trans &trans &bt BT_PRV &bt BT_CLR &bt BT_NXT &trans &trans
 &trans &kp LCTRL &kp LGUI &kp LALT &trans &trans &trans &trans &trans &trans &trans 
 &trans &trans &none &none &trans
             >;
