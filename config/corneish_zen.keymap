@@ -86,7 +86,8 @@
         cmb_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
-            timeout-ms = <0>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
         };
     };
 
