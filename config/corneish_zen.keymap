@@ -26,20 +26,6 @@
 
 / {
     behaviors {
-        lhm: left_homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_HOMEROW_MODS";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <150>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
-            hold-trigger-on-release;
-        };
-
         lhs: left_homerow_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_SHIFT";
@@ -50,20 +36,6 @@
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
-            hold-trigger-on-release;
-        };
-
-        rhm: right_homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_HOMEROW_MODS";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <150>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
             hold-trigger-on-release;
         };
 
