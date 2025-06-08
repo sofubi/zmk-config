@@ -146,19 +146,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-  &kp Q         &kp W         &kp E            &kp R        &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P
-  &lhs LSHFT A  &lhm LCTRL S  &lhm LEFT_ALT D  &lhm LGUI F  &kp G        &kp H    &kp J  &kp K      &kp L    &rhs RSHFT SEMICOLON
-  &kp Z         &kp X         &kp C            &kp V        &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH
-                              &kp LGUI         &mo 1        &kp SPACE    &kp RET  &mo 2  &kp RALT
+  &kp Q         &kp W        &kp E       &kp R       &kp T       &kp Y        &kp U       &kp I           &kp O          &kp P
+  &lhs LSHFT A  &lt 5 S      &lt 1 D     &lt 3 F     &kp G       &kp H        &lt 4 J     &lt 2 K         &lt 6 L        &rhs RSHFT SEMICOLON
+  &kp Z         &mt LCTRL X  &mt LGUI C  &mt LALT V  &kp B       &kp N        &mt LALT M  &mt LGUI COMMA  &mt LCTRL DOT  &kp FSLH
+                             &kp LGUI    &mo 1       &kp BSPC    &lt 7 SPACE  &mo 2       &kp RALT
             >;
         };
 
         rsym {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &kp LS(LPAR)  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans        &trans
             >;
         };
 
@@ -190,6 +190,24 @@
         };
 
         util {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
             bindings = <
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
