@@ -210,10 +210,10 @@
 
         layer_7 {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
+  &trans  &trans     &kp COLON  &kp ESC    &trans     &trans  &trans         &trans          &trans         &kp DELETE
+  &trans  &kp PRCNT  &kp FSLH   &kp ENTER  &trans     &trans  &kp LEFT_META  &trans          &trans         &trans
+  &trans  &trans     &trans     &kp EXCL   &trans     &trans  &trans         &mt RALT COMMA  &mt RCTRL DOT  &bootloader
+                     &trans     &trans     &kp TAB    &none   &trans         &trans
             >;
         };
     };
