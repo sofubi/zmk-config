@@ -172,12 +172,12 @@
             >;
         };
 
-        num {
+        rsym {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
+  &trans     &trans    &trans    &trans  &trans    &trans    &kp UNDER  &kp PIPE  &kp SINGLE_QUOTE   &trans
+  &kp CARET  &kp STAR  &kp AMPS  &none   &trans    &kp HASH  &kp TILDE  &kp FSLH  &kp DOUBLE_QUOTES  &kp DOLLAR
+  &trans     &trans    &trans    &trans  &trans    &trans    &kp MINUS  &kp BSLH  &kp GRAVE          &trans
+                       &trans    &trans  &trans    &trans    &trans     &trans
             >;
         };
 
