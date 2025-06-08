@@ -163,12 +163,12 @@
             >;
         };
 
-        lsym {
+        nav {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
+  &trans    &trans    &kp PG_UP  &trans     &trans    &trans  &trans        &trans  &trans        &trans
+  &kp LEFT  &kp UP    &kp DOWN   &kp RIGHT  &trans    &trans  &kp LEFT_GUI  &none   &kp LC(LALT)  &kp LC(LA(LSHFT))
+  &trans    &kp HOME  &kp PG_DN  &kp END    &trans    &trans  &trans        &trans  &trans        &trans
+                      &trans     &trans     &trans    &trans  &trans        &trans
             >;
         };
 
@@ -181,7 +181,7 @@
             >;
         };
 
-        nav {
+        navccc {
             bindings = <
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
