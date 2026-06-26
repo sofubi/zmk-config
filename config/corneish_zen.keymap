@@ -156,8 +156,8 @@
 
         layer_7 {
             bindings = <
-  &trans  &trans     &kp COLON  &kp ESC    &trans     &trans      &trans         &trans          &trans         &kp DELETE
-  &trans  &kp PRCNT  &kp FSLH   &kp ENTER  &trans     &trans      &kp LEFT_META  &trans          &trans         &trans
+  &trans  &trans     &kp COLON  &kp ESC    &trans     &bt BT_SEL 0      &bt BT_SEL 1         &bt BT_SEL 2          &bt BT_SEL 3         &bt BT_SEL 4
+  &trans  &kp PRCNT  &kp FSLH   &kp ENTER  &trans     &trans      &kp LEFT_META  &trans          &trans         &kp DELETE
   &trans  &trans     &trans     &kp EXCL   &trans     &bt BT_CLR  &trans         &mt RALT COMMA  &mt RCTRL DOT  &bootloader
                      &trans     &trans     &kp TAB    &none       &bt BT_PRV     &bt BT_NXT
             >;
