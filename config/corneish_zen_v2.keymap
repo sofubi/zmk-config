@@ -57,20 +57,20 @@
 
     combos {
         compatible = "zmk,combos";
-
-        cmb_bsp {
-            bindings = <&kp BACKSPACE>;
+        combo_backspace {
+            timeout-ms = <50>;
             key-positions = <18 19>;
+            bindings = <&kp BSPC>;
         };
-
-        cmb_ret {
-            bindings = <&kp RET>;
+        combo_enter {
+            timeout-ms = <50>;
             key-positions = <12 13>;
+            bindings = <&kp RET>;
         };
-
-        cmb_tab {
-            bindings = <&kp TAB>;
+        combo_tab {
+            timeout-ms = <50>;
             key-positions = <10 11>;
+            bindings = <&kp TAB>;
         };
     };
 
@@ -90,7 +90,7 @@
   &kp Q         &kp W    &kp E             &kp R         &kp T       &kp Y        &kp U         &kp I      &kp O    &kp P
   &lhs LSHFT A  &lt 5 S  &lt 1 D           &lt 3 F       &kp G       &kp H        &lt 4 J       &lt 2 K    &lt 6 L  &rhs RSHFT SEMICOLON
   &kp Z         &kp X    &kp C             &kp V         &kp B       &kp N        &kp M         &kp COMMA  &kp DOT  &kp FSLH
-                         &kp LEFT_CONTROL  &kp LEFT_ALT  &kp BSPC    &lt 7 SPACE  &kp LEFT_GUI  &kp RET
+                         &kp LEFT_ALT  &kp LEFT_CONTROL  &kp BSPC    &lt 7 SPACE  &kp LEFT_GUI  &kp RET
             >;
         };
 
