@@ -78,6 +78,11 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+        combo_jkesc {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp ESC>;
+        };
     };
 
     keymap {
